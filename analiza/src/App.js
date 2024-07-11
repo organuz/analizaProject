@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import BarChart from './components/graph';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+    // נתונים סטטיים
+    const [data] = useState([
+        { id: '1', courses: 5 },
+        { id: '2', courses: 3 },
+        { id: '3', courses: 8 },
+        { id: '4', courses: 2 },
+    ]);
+
+    return (
+        <div>
+            <h1>נתוני קורסים</h1>
+            <BarChart data={data} />
+        </div>
+    );
+};
 
 export default App;
+
