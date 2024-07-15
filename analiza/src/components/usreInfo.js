@@ -8,7 +8,7 @@ const [data] =[
     { id: '4', courses: 2 },
 ];
 
-function userData(){
+function userData(data){
     return data
 }
 export default userData;
